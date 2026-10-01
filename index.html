@@ -4,8 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#070707">
-<meta name="description" content="PROJECT GOST — 13-week physique, strength and conditioning transformation (Oct 1 – Dec 31).">
-<title>PROJECT GOST — 13-Week Transformation OS</title>
+<meta name="description" content="
+PROJECT BRUTAL — 13-week physique, strength and conditioning transformation (Oct 1 – Dec 31).">
+<title>
+PROJECT BRUTAL — 13-Week Transformation OS</title>
 <style>
 :root{
   --bg:#070707; --surface:#101010; --surface-2:#161616; --surface-3:#1c1c1c;
@@ -418,14 +420,16 @@ footer.foot{margin-top:40px;border-top:1px solid var(--border);padding-top:18px;
 
 <header class="mobilebar" role="banner">
   <button class="iconbtn" id="menuBtn" aria-label="Open navigation menu" aria-expanded="false" aria-controls="sidebar">MENU</button>
-  <div class="mb-brand"><i></i>PROJECT GOST</div>
+  <div class="mb-brand"><i></i>
+PROJECT BRUTAL</div>
   <button class="iconbtn" id="mbTimer" aria-label="Open rest timer">TIMER</button>
 </header>
 
 <div class="app">
 <aside class="sidebar" id="sidebar" aria-label="Primary">
   <div class="brand">
-    <div class="brand-mark"><span class="bar" aria-hidden="true"></span><div><h1>PROJECT GOST</h1><small>Athlete Operating System</small></div></div>
+    <div class="brand-mark"><span class="bar" aria-hidden="true"></span><div><h1>
+PROJECT BRUTAL</h1><small>Athlete Operating System</small></div></div>
   </div>
   <nav class="nav" id="nav" aria-label="Sections"></nav>
   <div class="side-foot">
@@ -438,7 +442,8 @@ footer.foot{margin-top:40px;border-top:1px solid var(--border);padding-top:18px;
 
 <main id="main" tabindex="-1">
   <div class="topbar">
-    <div class="crumb">PROJECT GOST / <b id="crumb">COMMAND CENTER</b></div>
+    <div class="crumb">
+PROJECT BRUTAL / <b id="crumb">COMMAND CENTER</b></div>
     <div class="top-actions">
       <span class="chip o" id="topWeek"><span class="dot"></span>—</span>
       <button class="btn sm" data-go="workouts" id="topToday">Today's session →</button>
@@ -989,7 +994,8 @@ footer.foot{margin-top:40px;border-top:1px solid var(--border);padding-top:18px;
   <div class="grid g3" id="sciGrid"></div>
   <h3 class="mt2">Final assessment checklist (Week 13)</h3>
   <div class="card" id="finalChecklist"></div>
-  <footer class="foot">PROJECT GOST · Educational fitness programming · Oct 1 – Dec 31 · All data stored locally in your browser.</footer>
+  <footer class="foot">
+PROJECT BRUTAL · Educational fitness programming · Oct 1 – Dec 31 · All data stored locally in your browser.</footer>
 </section>
 
 </main>
@@ -1030,7 +1036,8 @@ footer.foot{margin-top:40px;border-top:1px solid var(--border);padding-top:18px;
 <script>
 "use strict";
 /* =====================================================================
-   PROJECT GOST — PROGRAM DATA
+   
+PROJECT BRUTAL — PROGRAM DATA
    ===================================================================== */
 
 /* ---------- EXERCISE LIBRARY ----------
@@ -1545,7 +1552,8 @@ const SLED_ALT = "No sled? Push: prowler, or motor-off treadmill push 20–30 s 
 <script>
 "use strict";
 /* =====================================================================
-   PROJECT GOST — APPLICATION
+   
+PROJECT BRUTAL — APPLICATION
    ===================================================================== */
 const $=(s,r=document)=>r.querySelector(s);
 const $$=(s,r=document)=>Array.from(r.querySelectorAll(s));
@@ -2265,7 +2273,8 @@ $("#exportBtn").addEventListener("click",()=>{const o={};for(let i=0;i<localStor
 $("#importLbl").addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();$("#importFile").click();}});
 $("#importFile").addEventListener("change",e=>{const f=e.target.files[0];if(!f)return;const r=new FileReader();r.onload=()=>{try{const o=JSON.parse(r.result);Object.keys(o).forEach(k=>{if(k.startsWith("pb."))localStorage.setItem(k,o[k]);});toast("Imported — reloading");setTimeout(()=>location.reload(),600);}catch(err){toast("Invalid file");}};r.readAsText(f);});
 $("#resetChecks").addEventListener("click",()=>{if(!confirm("Reset ALL workout checklists, sessions and streak? Tracker data is kept."))return;done={};started={};sessions={};store.set("done",done);store.set("started",started);store.set("sessions",sessions);updateGlobal();toast("Checklists reset");});
-$("#resetAll").addEventListener("click",()=>{if(!confirm("Delete ALL PROJECT GOST data in this browser? This cannot be undone."))return;const ks=[];for(let i=0;i<localStorage.length;i++){const k=localStorage.key(i);if(k.startsWith("pb."))ks.push(k);}ks.forEach(k=>localStorage.removeItem(k));location.reload();});
+$("#resetAll").addEventListener("click",()=>{if(!confirm("Delete ALL 
+PROJECT BRUTAL data in this browser? This cannot be undone."))return;const ks=[];for(let i=0;i<localStorage.length;i++){const k=localStorage.key(i);if(k.startsWith("pb."))ks.push(k);}ks.forEach(k=>localStorage.removeItem(k));location.reload();});
 
 /* ---------- LIBRARY ---------- */
 const CATS=["All","Chest","Back","Shoulders","Arms","Legs","Core","Calves","Forearms","Conditioning","HYROX"];let libCat="All";
